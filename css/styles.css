@@ -1,0 +1,48 @@
+:root{
+    /*Primary colors*/
+    --color-primary-white: #FFFFFF;
+    --color-primary-blue-light: #2B7FFF;
+    --color-primary-blue-dark: #011C44;
+    --color-brend-dark: #465929;
+     /*Secondary colors*/
+     --color-secondary-gray-dark: #4A4A4A;
+     --color-secondary-gray-midle: #4A4A4A;
+     --color-secondary-gray-light: #747272;
+     --color-secondary-blue-dark: #011F4A;
+     --color-secondary-yellow: #FFD02B;
+}
+
+/* base */
+body{
+    color: var(--color-primary-blue-dark);
+}
+
+/*header*/
+.header-link{
+    color: var(--color-primary-blue-dark);
+}  
+
+.header-link:hover{
+    color: var(--color-primary-blue-light);
+}
+
+.header-title{
+    color: var(--color-primary-blue-light);
+}
+
+.header-button{
+    color: var(--color-primary-white);
+    border-radius: 32px;
+    border: 2px solid var(--color-primary-blue-light);
+    background-color: var(--color-primary-blue-light);
+    cursor: pointer;
+  }
+  
+.header-button:hover{
+    color: var(--color-brend-dark);
+    background-color: transparent;
+  }
+
+.header-text{
+    color: var(--color-primary-blue-dark);
+}
