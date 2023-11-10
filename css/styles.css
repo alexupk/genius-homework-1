@@ -1,20 +1,114 @@
+@font-face {
+    font-display: swap; 
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/play-v19-cyrillic_latin-regular.eot'); 
+    src: url('../fonts/play-v19-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/play-v19-cyrillic_latin-regular.woff2') format('woff2'), 
+         url('../fonts/play-v19-cyrillic_latin-regular.woff') format('woff'), 
+         url('../fonts/play-v19-cyrillic_latin-regular.ttf') format('truetype'), 
+         url('../fonts/play-v19-cyrillic_latin-regular.svg#Play') format('svg'); 
+}
+  
+@font-face {
+    font-display: swap; 
+    font-family: 'Play';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/play-v19-cyrillic_latin-700.eot'); 
+    src: url('../fonts/play-v19-cyrillic_latin-700.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/play-v19-cyrillic_latin-700.woff2') format('woff2'), 
+         url('../fonts/play-v19-cyrillic_latin-700.woff') format('woff'), 
+         url('../fonts/play-v19-cyrillic_latin-700.ttf') format('truetype'), 
+         url('../fonts/play-v19-cyrillic_latin-700.svg#Play') format('svg'); 
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/roboto-v30-cyrillic_latin-regular.eot'); 
+    src: url('../fonts/roboto-v30-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/roboto-v30-cyrillic_latin-regular.woff2') format('woff2'), 
+         url('../fonts/roboto-v30-cyrillic_latin-regular.woff') format('woff'), 
+         url('../fonts/roboto-v30-cyrillic_latin-regular.ttf') format('truetype'), 
+         url('../fonts/roboto-v30-cyrillic_latin-regular.svg#Roboto') format('svg'); 
+  }
+  
+  @font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/roboto-v30-cyrillic_latin-700.eot'); 
+    src: url('../fonts/roboto-v30-cyrillic_latin-700.eot?#iefix') format('embedded-opentype'), 
+         url('../fonts/roboto-v30-cyrillic_latin-700.woff2') format('woff2'), 
+         url('../fonts/roboto-v30-cyrillic_latin-700.woff') format('woff'), 
+         url('../fonts/roboto-v30-cyrillic_latin-700.ttf') format('truetype'), 
+         url('../fonts/roboto-v30-cyrillic_latin-700.svg#Roboto') format('svg'); 
+  }
+
 :root{
     /*Primary colors*/
     --color-primary-white: #FFFFFF;
     --color-primary-blue-light: #2B7FFF;
     --color-primary-blue-dark: #011C44;
-    --color-brend-dark: #465929;
+
      /*Secondary colors*/
      --color-secondary-gray-dark: #4A4A4A;
      --color-secondary-gray-midle: #4A4A4A;
      --color-secondary-gray-light: #747272;
      --color-secondary-blue-dark: #011F4A;
      --color-secondary-yellow: #FFD02B;
+     --color-secondary-black:#000
 }
 
 /* base */
+*{
+    box-sizing: border-box;
+}
+
 body{
     color: var(--color-primary-blue-dark);
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+h2{
+    color: var(--color-primary-blue-dark);
+    font-family: "Play", sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+h2 span{
+    color: var(--color-primary-blue-light);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+address {
+    font-style: normal;
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 /*header*/
@@ -26,11 +120,16 @@ body{
     color: var(--color-primary-blue-light);
 }
 
-.header-title{
+/*Hero-section*/
+.hero-title{
     color: var(--color-primary-blue-light);
+    font-family: "Play", sans-serif;
+    font-size: 140px;
+    font-weight: 700;
+    text-transform: capitalize;
 }
 
-.header-button{
+.hero-button{
     color: var(--color-primary-white);
     border-radius: 32px;
     border: 2px solid var(--color-primary-blue-light);
@@ -38,11 +137,75 @@ body{
     cursor: pointer;
   }
   
-.header-button:hover{
+.hero-button:hover{
     color: var(--color-brend-dark);
     background-color: transparent;
   }
 
-.header-text{
+.hero-text{
     color: var(--color-primary-blue-dark);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/*Reincarnate-section*/
+.reincarnate-title span{
+    text-transform: capitalize;
+}
+
+.reincarnate-text{
+    font-size: 22px;
+}
+
+.reincarnate-text span{
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+/*Сhoose-section*/
+.choose-text{
+    color: var(--color-secondary-black);
+}
+
+/*Procedures-section*/
+.procedures-article-title{
+    color: var(--color-primary-white);
+    font-size: 22px;
+}
+
+/*Find-us-section*/
+.find-us-text{
+    font-size: 22px;
+    color: var(--color-primary-white);
+   
+}
+
+.find-us-text span{
+    font-size: 22px;
+    color: var(--color-primary-blue-light);
+}
+
+.find-us-button{
+    color: var(--color-primary-white);
+    border-radius: 32px;
+    border: 2px solid var(--color-primary-blue-light);
+    background-color: var(--color-primary-blue-light);
+    cursor: pointer;
+  }
+  
+.find-us-button:hover{
+    color: var(--color-brend-dark);
+    background-color: transparent;
+  }
+
+/*footer*/
+.footer-link{
+    color: var(--color-primary-white);
+    font-size: 16px;
+}
+
+.footer-text{
+    color: var(--color-secondary-gray-light);
+    font-size: 13px;
+    font-style: normal;
 }
